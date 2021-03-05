@@ -56,7 +56,6 @@ public class CountryController
 	public String updateCountry()
 	{
 		System.out.println("updatecountry");
-		//Optional<Alien> a = repo.findById(aid);
 		URL url;
 		String inline = "";
 		try {
@@ -86,11 +85,10 @@ public class CountryController
 					jobj = (JSONObject)parse.parse(inline);
 					JSONArray jsonarr_1 = (JSONArray) jobj.get("objs");
 					Country c=new Country();
-					//Get data for Results array
 					for(int i=0;i<jsonarr_1.size();i++)
 					{
 					//Store the JSON objects in an array
-					//Get the index of the JSON object and print the values as per the index
+					//Get the index of the JSON object and saves the values as per the index
 					c=new Country();
 					JSONObject jsonobj_1 = (JSONObject)jsonarr_1.get(i);
 					//c.setCid(i+1);

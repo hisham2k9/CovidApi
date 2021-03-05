@@ -23,7 +23,20 @@ import net.minidev.json.JSONArray;
 import net.minidev.json.JSONObject;
 import net.minidev.json.parser.JSONParser;
 import net.minidev.json.parser.ParseException;
-
+/**
+ * This is the controller for State Entity of this service.
+ * The updateState method receives the Entity from an external service.
+ * The method processes the JSON Array and converts it into a Java Objects.
+ * And saves it into a database.
+ * 
+ * The other methods with @GetMapping is simple in their execution returning JSON
+ * Objects with various different queries.
+ * 
+ * The method with @PutMapping lets you update an entry.
+ *
+ * @author  hisham2k9
+ * 
+ */
 @Controller
 public class StateController 
 {
@@ -52,8 +65,7 @@ public class StateController
 				
 				while(sc.hasNext())
 				{
-					//System.out.println(inline);
-				inline+=sc.nextLine();
+					inline+=sc.nextLine();
 				}
 				System.out.println("\nJSON data in string format");
 				System.out.println(inline);
@@ -70,7 +82,7 @@ public class StateController
 					for(int i=0;i<jsonarr_1.size();i++)
 					{
 					//Store the JSON objects in an array
-					//Get the index of the JSON object and print the values as per the index
+					//Get the index of the JSON object and saves the values as per the index
 						s=new State();
 						JSONObject jsonobj_1 = (JSONObject)jsonarr_1.get(i);
 						s.setName((String) jsonobj_1.get("state"));
