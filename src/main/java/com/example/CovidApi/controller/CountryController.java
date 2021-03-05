@@ -22,6 +22,21 @@ import net.minidev.json.JSONObject;
 import net.minidev.json.parser.JSONParser;
 import net.minidev.json.parser.ParseException;
 
+
+/**
+ * This is the controller for Country Entity of this service.
+ * The updateCountry method receives the Entity from an external service.
+ * The method processes the JSON Array and converts it into a Java Objects.
+ * And saves it into a database.
+ * 
+ * The other methods with @GetMapping is simple in their execution returning JSON
+ * Objects with various different queries.
+ * 
+ * The method with @PutMapping lets you update an entry.
+ *
+ * @author  hisham2k9
+ * 
+ */
 @Controller 
 public class CountryController 
 {
